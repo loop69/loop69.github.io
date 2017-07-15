@@ -164,6 +164,7 @@ function Hide() {
 function getCookie(name) {
 
     let cookie = " " + document.cookie;
+    console.log(cookie);
 
     let search = " " + name + "=";
 
