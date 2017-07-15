@@ -15,12 +15,11 @@ function init() {
         let hide = localStorage.getItem("hide");
 
         let font_size = document.querySelectorAll("nav, div, p, footer");
-        let elle = font_size.length;
 
         //console.log(elle); console.log(black); console.log(size); console.log(hide);
 
-        for (let i = 0; i < elle; i++) {
-            font_size[i].style.fontSize = size;
+        for (let node of font_size) {
+            if(node.nodeType === 1)node.style.fontSize = size;
         }
 
 
@@ -34,8 +33,10 @@ function init() {
             ToggleButtonVal('hide-img', 'скрыть', 'показать');
             let images = document.querySelectorAll('img');
 
-            for (let i = 0; i <= images.length; i++) {
-                images[i].classList.toggle('hide');
+            for (let node of images) {
+
+                if (node.nodeType === 1) node.classList.toggle('hide');
+
             }
         }
 
@@ -55,9 +56,9 @@ function Hide() {
 
     let images = document.querySelectorAll('img');
 
-    for (let i = 0; i <= images.length; i++) {
+    for (let node of images) {
 
-         images[i].classList.toggle('hide');
+        if (node.nodeType === 1) node.classList.toggle('hide');
 
     }
 
@@ -68,8 +69,8 @@ function Hide() {
      let size = localStorage.getItem('size');
 
      let sm = document.querySelectorAll("nav, ul, li, div, p, footer");
-     for (let i = 0; i < sm.length; i++) {
-         sm[i].style.fontSize = "large";
+     for (let node of sm) {
+         if(node.nodeType === 1) node.style.fontSize = "large";
      }
      if (size) {localStorage.removeItem('size');}
      localStorage.setItem('size', 'large');
@@ -79,8 +80,8 @@ function Hide() {
      let size = localStorage.getItem('size');
 
      let md = document.querySelectorAll("nav, ul, li, div, p, footer");
-     for (let i = 0; i < md.length; i++) {
-         md[i].style.fontSize = "x-large";
+     for (let node of md) {
+         if(node.nodeType === 1) node.style.fontSize = "x-large";
      }
 
      if (size) {localStorage.removeItem('size');}
@@ -92,8 +93,8 @@ function Hide() {
 
      let lg = document.querySelectorAll("nav, ul, li, div, p, footer");
      console.log(lg);
-     for (let i = 0; i < lg.length; i++) {
-         lg[i].style.fontSize = "xx-large";
+     for (let node of lg) {
+         if(node.nodeType === 1) node.style.fontSize = "xx-large";
      }
      if (size) {localStorage.removeItem('size');}
      localStorage.setItem('size', 'xx-large');
