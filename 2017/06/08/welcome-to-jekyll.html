@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>ГКОУ РО "Ростовская специальная школа-интернат №48"</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <link rel="stylesheet" href="/assets/styles/main.css">
-    <script src="/assets/js/badeye.js"></script>
+    <link rel="stylesheet" href="/assets/styles/slider.css">
+    <link rel="stylesheet" href="/assets/styles/slider_jq.css">
+    <script src="/assets/js/jquery-3.2.1.js"></script>
 
 </head>
 
@@ -13,17 +16,17 @@
     <header>
     <div class="badeye" id="badeye">
 
-    <button id="font_normal" class="btn" onclick="Normal()"> </button>
+    <button id="font_normal" class="btn"> </button>
 
-    <button id="font_middle" class="btn" onclick="Middle()"></button>
+    <button id="font_middle" class="btn"></button>
 
-    <button id="font_big" class="btn" onclick="Big()"></button>
+    <button id="font_big" class="btn"></button>
 
-    <div class="w-b"><label class="label">Фон</label><button id="fon-color" class="btn" onclick="Black()">чёрный</button></div>
+    <div class="w-b"><label class="label">Фон</label><button id="fon-color" class="btn">чёрный</button></div>
 
-    <div class="h-s"><label class="label">Изображения</label><button id="hide-img" class="btn" onclick="Hide()">скрыть</button></div>
+    <div class="h-s"><label class="label">Изображения</label><button id="hide-img" class="btn">скрыть</button></div>
 
-    <button id="back" class="btn" onclick="Back()">к обычной версии</button>
+    <button id="back" class="btn">к обычной версии</button>
 
 </div>
 
@@ -110,9 +113,18 @@
 </header>
 
 
-   <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+   <main>
+    <article>
+    <h1>Welcome to Jekyll!</h1>
+
+    <p>06/08/17</p>
+    <h2 id="Заголовок">Заголовок</h2>
+
+<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p><img src="/assets/images/winnie.jpg" alt="winnie the pooh" title="Необязательный титул" /></p>
 
 <p>Jekyll also offers powerful support for code snippets:</p>
 
@@ -125,6 +137,25 @@
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
+        
+        <span>foo</span>
+        
+        <span>bar</span>
+        
+        <span>учёба</span>
+        
+        <span>спорт</span>
+        
+        <span>успехи</span>
+        
+        <span>концерт</span>
+        
+        <span>танцы</span>
+        
+        <span>развлечения</span>
+        
+    </article>
+</main>
 
     <footer>
          <nav class="menu-bottom">
@@ -204,6 +235,9 @@
          <div class="logo">ГКОУ РО "Ростовская специальная школа-интернат №48"</div>
     </footer>
 
+
+
+    <script src="/assets/js/badeye.js"></script>
 
     <script>
        init();

@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>ГКОУ РО "Ростовская специальная школа-интернат №48"</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <link rel="stylesheet" href="/assets/styles/main.css">
-    <script src="/assets/js/badeye.js"></script>
+    <link rel="stylesheet" href="/assets/styles/slider.css">
+    <link rel="stylesheet" href="/assets/styles/slider_jq.css">
+    <script src="/assets/js/jquery-3.2.1.js"></script>
 
 </head>
 
@@ -13,17 +16,17 @@
     <header>
     <div class="badeye" id="badeye">
 
-    <button id="font_normal" class="btn" onclick="Normal()"> </button>
+    <button id="font_normal" class="btn"> </button>
 
-    <button id="font_middle" class="btn" onclick="Middle()"></button>
+    <button id="font_middle" class="btn"></button>
 
-    <button id="font_big" class="btn" onclick="Big()"></button>
+    <button id="font_big" class="btn"></button>
 
-    <div class="w-b"><label class="label">Фон</label><button id="fon-color" class="btn" onclick="Black()">чёрный</button></div>
+    <div class="w-b"><label class="label">Фон</label><button id="fon-color" class="btn">чёрный</button></div>
 
-    <div class="h-s"><label class="label">Изображения</label><button id="hide-img" class="btn" onclick="Hide()">скрыть</button></div>
+    <div class="h-s"><label class="label">Изображения</label><button id="hide-img" class="btn">скрыть</button></div>
 
-    <button id="back" class="btn" onclick="Back()">к обычной версии</button>
+    <button id="back" class="btn">к обычной версии</button>
 
 </div>
 
@@ -115,7 +118,7 @@
         <h2>ПСИХОЛОГИЧЕСКИЙ ТЕСТ "КТО ВЫ В КОМАНДЕ"</h2>
         <p>В каждой паре утверждений выберите то, которое Вам больше подходит</p>
     </div>
-    <form name= "F">
+    <form name="F">
       <div class="choise">
                 <ul class="radio_pair">
                     <li><label><input type="radio" value="1" name="R1" ><b>&nbsp;&nbsp;
@@ -181,9 +184,11 @@
             <img  src="/assets/images/you.jpg"  width="200" height="250"><br />
 
            <div class="you-are"></div>
+           <!-- <div><a href="" id="B1" class="button">Результат</a></div>-->
 
-            <input type="button" align="left" value="Результат" name="B1" id="B1">
-            <input type="reset" align="right" value="Сброс" name="B2" id="B2">
+
+            <input type="button" class="button" align="left" value="Результат" name="B1" id="B1">
+           <input type="reset" class="button" align="right" value="Сброс" name="B2" id="B2">
 
         </div>
     </form>
@@ -268,6 +273,9 @@
          <div class="logo">ГКОУ РО "Ростовская специальная школа-интернат №48"</div>
     </footer>
 
+
+
+    <script src="/assets/js/badeye.js"></script>
 
     <script>
        init();

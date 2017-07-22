@@ -8,14 +8,15 @@
 
 function makeDiagnosis()
 {
-   let sum = "";
+    let youare = document.querySelector('.you-are');
+    let sum = "";
 
     for( let j=0; j<document.F.R1.length; j++ ) { if( document.F.R1[j].checked ) { sum += document.F.R1[j].value; } }
     for( let j=0; j<document.F.R2.length; j++ ) { if( document.F.R2[j].checked ) { sum += document.F.R2[j].value; } }
     for( let j=0; j<document.F.R3.length; j++ ) { if( document.F.R3[j].checked ) { sum += document.F.R3[j].value; } }
     for( let j=0; j<document.F.R4.length; j++ ) { if( document.F.R4[j].checked ) { sum += document.F.R4[j].value; } }
 
-   let rez= "";
+    let rez= "";
 
     switch (sum)
     {
@@ -36,7 +37,7 @@ function makeDiagnosis()
             break;
         case "2467" : rez = "Лирик";
             break;
-        case "1368" : rez = "Предпрениматель";
+        case "1368" : rez = "Предприниматель";
             break;
         case "1457" : rez = "Хранитель";
             break;
@@ -54,11 +55,11 @@ function makeDiagnosis()
         case "1358" : rez = "Администратор";
             break;
 
-        default : alert ("Будте внимательнее! Попытайтесь еще раз!");
+        default : youare.innerHTML = "Будте внимательнее! Попытайтесь еще раз!";
 
             return;}
 
-            let youare = document.querySelector('.you-are');
+
                 youare.innerHTML = rez;
 
 }
