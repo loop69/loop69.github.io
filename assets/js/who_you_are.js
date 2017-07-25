@@ -37,7 +37,7 @@ function makeDiagnosis()
             break;
         case "2467" : rez = "Лирик";
             break;
-        case "1368" : rez = "Предприниматель";
+        case "1368" : rez = "Предпрениматель";
             break;
         case "1457" : rez = "Хранитель";
             break;

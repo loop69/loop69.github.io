@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <title>ГКОУ РО "Ростовская специальная школа-интернат №48"</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <link rel="stylesheet" href="/assets/styles/main.css">
-    <link rel="stylesheet" href="/assets/styles/slider.css">
-    <link rel="stylesheet" href="/assets/styles/slider_jq.css">
-    <script src="/assets/js/jquery-3.2.1.js"></script>
+    <script src="/assets/js/badeye.js"></script>
 
 </head>
 
@@ -16,17 +13,17 @@
     <header>
     <div class="badeye" id="badeye">
 
-    <button id="font_normal" class="btn"> </button>
+    <button id="font_normal" class="btn" onclick="Normal()"> </button>
 
-    <button id="font_middle" class="btn"></button>
+    <button id="font_middle" class="btn" onclick="Middle()"></button>
 
-    <button id="font_big" class="btn"></button>
+    <button id="font_big" class="btn" onclick="Big()"></button>
 
-    <div class="w-b"><label class="label">Фон</label><button id="fon-color" class="btn">чёрный</button></div>
+    <div class="w-b"><label class="label">Фон</label><button id="fon-color" class="btn" onclick="Black()">чёрный</button></div>
 
-    <div class="h-s"><label class="label">Изображения</label><button id="hide-img" class="btn">скрыть</button></div>
+    <div class="h-s"><label class="label">Изображения</label><button id="hide-img" class="btn" onclick="Hide()">скрыть</button></div>
 
-    <button id="back" class="btn">к обычной версии</button>
+    <button id="back" class="btn" onclick="Back()">к обычной версии</button>
 
 </div>
 
@@ -113,26 +110,9 @@
 </header>
 
 
-   <main>
+   <main class="gallery">
 <h1>Галлерея</h1>
-   <div class="audio">
-       <span> </span>
-    <audio controls>
-
-        <source src="http://alexey-osipov.ru/upload/iblock/0f7/konferentsiya_svyatitel_ignatiy_bryanchaninov._150_let_so_dnya_prestavleniya_moskva_2017.05.27_segment_1.mp3" type="audio/mpeg">
-        Тег audio не поддерживается вашим браузером.
-        <a href="http://alexey-osipov.ru/upload/iblock/0f7/konferentsiya_svyatitel_ignatiy_bryanchaninov._150_let_so_dnya_prestavleniya_moskva_2017.05.27_segment_1.mp3">Скачайте музыку</a>.
-    </audio>
-   </div>
-    <div class="video">
-        <video width="320" height="240" controls>
-            <source src="http://alexey-osipov.ru/upload/iblock/61d/lozhnye-vozzreniya-na-spasenie-_mpda_-2017.05.02_-_-osipov-a.i.-_2_.mp4" type="video/mp4">
-
-            Your browser does not support the video tag.
-        </video>
-    </div>
 </main>
-
 
     <footer>
          <nav class="menu-bottom">
@@ -212,9 +192,6 @@
          <div class="logo">ГКОУ РО "Ростовская специальная школа-интернат №48"</div>
     </footer>
 
-
-
-    <script src="/assets/js/badeye.js"></script>
 
     <script>
        init();

@@ -1,6 +1,3 @@
-
-// инициализация при загрузке или переходе
-
 function init() {
     let badeye_cookie = getCookie('badeye');
     console.log(badeye_cookie);
@@ -17,12 +14,12 @@ function init() {
         let black = localStorage.getItem("black");
         let hide = localStorage.getItem("hide");
 
-        let font_size = document.querySelectorAll("nav, ul, li, div, p, footer");
+        let font_size = document.querySelectorAll("nav, div, p, footer");
 
         //console.log(elle); console.log(black); console.log(size); console.log(hide);
 
         for (let node of font_size) {
-            if(node.nodeType === 1) node.style.fontSize = size;
+            if(node.nodeType === 1)node.style.fontSize = size;
         }
 
 
@@ -45,9 +42,6 @@ function init() {
 
     }
 }
-
-// hide images
-
 function Hide() {
 
     let hide = localStorage.getItem('hide');
@@ -70,8 +64,6 @@ function Hide() {
 
 
 }
-
-// три функции по переключению развмера шрифта
 
  function Normal() {
      let size = localStorage.getItem('size');
@@ -109,8 +101,6 @@ function Hide() {
 
  }
 
- // смена цвета фона и текста
-
  function Black() {
 
      let black = localStorage.getItem('black');
@@ -128,8 +118,6 @@ function Hide() {
      }
  }
 
- // выход в обычную версию сайта
-
  function Back() {
 
     let badeye_cookie = getCookie('badeye');
@@ -141,10 +129,6 @@ function Hide() {
         window.location.reload();
     }
  }
-
-
-// включение версии для слабовидящих
-
 
  function Badeye() {
 
@@ -177,8 +161,6 @@ function Hide() {
      }
  }
 
-// получение куки
-
 function getCookie(name) {
 
     let cookie = " " + document.cookie;
@@ -208,8 +190,6 @@ function getCookie(name) {
     return(setStr);
 }
 
-// смена надписаей на кнопках
-
 function  ToggleButtonVal(id, first, second) {
 
     let button = document.getElementById(id);
@@ -231,8 +211,6 @@ function  ToggleButtonVal(id, first, second) {
 
 }
 
-// смена цвета фона
-
 function backColor() {
    // let header = document.querySelector('header');
     let body = document.querySelector('body');
@@ -242,23 +220,3 @@ function backColor() {
     body.classList.toggle('black');
     footer.classList.toggle('black');
 }
-
-//получаем эелементы кнопок и вешаем обработчики onclick
-
-let fontNormal = document.getElementById("font_normal");
-fontNormal.addEventListener("click", Normal);
-
-let fontMiddle = document.getElementById("font_middle");
-fontMiddle.addEventListener("click", Middle);
-
-let fontBig = document.getElementById("font_big");
-fontBig.addEventListener("click", Big);
-
-let fonColor = document.getElementById("fon-color");
-fonColor.addEventListener("click", Black);
-
-let hideImg = document.getElementById("hide-img");
-hideImg.addEventListener("click", Hide);
-
-let back = document.getElementById("back");
-back.addEventListener("click", Back);
