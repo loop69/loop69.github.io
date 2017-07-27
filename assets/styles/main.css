@@ -70,17 +70,17 @@ main {
     width: 100%;
     height: 50px; }
   @media screen and (min-width: 960px) {
-    main section.pict {
+    main .pict {
       width: 44%; } }
-  main section.pict .mini-gallery ul {
+  main .pict .mini-gallery ul {
     margin: 0;
     padding: 0;
     column-count: 3;
     column-gap: 0; }
-  main section.pict .mini-gallery li {
+  main .pict .mini-gallery li {
     list-style: none;
     line-height: 0; }
-  main section.pict .mini-gallery img {
+  main .pict .mini-gallery img {
     width: 100%;
     height: 130px;
     object-fit: cover; }
