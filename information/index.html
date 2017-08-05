@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ГКОУ РО "Ростовская специальная школа-интернат №48"</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/assets/styles/main.css">
 
     
@@ -98,7 +98,7 @@
          
       </ul>
  </nav>
-
+<div class="sand_button"></div>
 
     <div class="tobadeye" id="tobadeye"></div>
 
@@ -168,22 +168,18 @@
 
     <article class="palindrom">
 
-        <p>Определить числа палиндромы в диапазоне</p>
+        <h3>Определить числа палиндромы в диапазоне</h3>
 
 
             <label for="pal">от</label><input id="pal" size="6">
 
-
             <label for="palend">до</label><input id="palend" size="6">
 
-
-        <div>
-        <input type="button" id="dopal" value="палиндромнуть">
-        </div>
+            <input type="button" id="dopal" value="палиндромнуть">
 
         <div class="answer"></div>
 
-    </article>
+
 
 
 
@@ -242,11 +238,11 @@
 
         let art = document.querySelector(".palindrom");
 
-        let p = document.createElement("p");
+        let h3 = document.createElement("h3");
 
-        p.appendChild(document.createTextNode("Таблица умножения"));
+        h3.appendChild(document.createTextNode("Таблица умножения"));
 
-        art.appendChild(p);
+        art.appendChild(h3);
 
         art.appendChild(table);
         table.firstElementChild.style = "background: white";
@@ -257,6 +253,8 @@
             t.firstElementChild.style = "background: white";
 
     </script>
+
+    </article>
 </main>
 
     <footer>
@@ -325,7 +323,7 @@
          
       </ul>
  </nav>
-
+<div class="sand_button"></div>
         <div class="social">
             <ul>
                 <li><a href="#"></a></li>

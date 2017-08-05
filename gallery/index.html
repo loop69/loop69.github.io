@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ГКОУ РО "Ростовская специальная школа-интернат №48"</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/assets/styles/main.css">
 
     
@@ -98,7 +98,7 @@
          
       </ul>
  </nav>
-
+<div class="sand_button"></div>
 
     <div class="tobadeye" id="tobadeye"></div>
 
@@ -109,27 +109,115 @@
 
 
    <main class="gallery">
-<h1>Галлерея</h1>
+<div class="grid-sizer"></div>
+
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g1.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g2.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g3.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g4.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g5.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g6.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g7.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g8.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g9.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g10.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g11.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g12.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g13.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g14.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g15.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g16.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g17.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g18.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g19.jpg" alt="">
+    </div>
+    
+    <div class="grid-item">
+        <img src="/assets/js/spin.gif" data-original="/assets/images/gal/g20.jpg" alt="">
+    </div>
+    
+
+    <script src="/assets/js/jquery.lazyload.js"></script>
+    <script src="/assets/js/masonry.pkgd.js"></script>
 
     <script>
+        let images = $('img');
+        let grid = $('main.gallery');
 
-        function Triangle(h, w, color) {
-            this.htmlCode = `<div style="border: ${h}px solid transparent; \
-                                         border-bottom: ${w}px solid ${color};\
-                                         width: 0; \
-                                         height: 100px;\
-                                             "></div>`;
+        grid.masonry({
+           itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            gutter: 5,
+            percentPosition: true
 
-            this.show = function () {
-                document.write(this.htmlCode);
+        });
+        images.lazyload({
+            effect: "fadeIn",
+            load: function () {
+                grid.masonry('layout');
             }
-        }
-
-        let triangle = new Triangle(100, 100, "red");
-        triangle.show();
-
+        });
     </script>
+
 </main>
+
+
 
     <footer>
          <nav class="menu-bottom">
@@ -197,7 +285,7 @@
          
       </ul>
  </nav>
-
+<div class="sand_button"></div>
         <div class="social">
             <ul>
                 <li><a href="#"></a></li>
